@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@font-face {
+    font-family: IRANMarker;
+    src: url(IRANMarker.ttf);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+::selection {
+    background-color: rgb(13, 63, 202);
+    color: #FFF;
+}
+body, input, textarea {
+    font-family: IRANMarker;
+}
+body {
+    background-color: #e5e5e5;
+    overflow: hidden;
+}
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    background: rgb(13,8,175);
+    background: linear-gradient(90deg, rgba(13,8,175,1) 0%, rgba(19,3,84,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form {
+    width: 100%;
+    max-width: 920px;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.contact__form {
+    background: rgb(74,34,195);
+    background: linear-gradient(0deg, rgba(74,34,195,1) 0%, rgba(45,150,253,1) 100%);
+    position: relative;
+}
+.contact__form:before {
+    content: "";
+    position: absolute;
+    top: 200px;
+    left: -13px;
+    width: 26px;
+    height: 26px;
+    background: rgb(74,34,195);
+    background: linear-gradient(0deg, rgba(74,34,195,1) 0%, rgba(45,150,253,1) 100%);
+    transform: rotate(45deg);
+}
+form {
+    padding: 2.3rem 2.2rem;
+    z-index: 10;
+    overflow: hidden;
+    position: relative;
+}
+.title {
+    color: #FFF;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+.input__container {
+    position: relative;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input {
+    width: 100%;
+    outline: none;
+    border: 1px solid rgb(13, 63, 202);
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    transition: 0.3s ease-in;
+    text-align: right;
+}
+textarea.input {
+    padding: 0.8rem 1.2rem;
+    min-height: 150px;
+    border-radius: 20px;
+    resize: none;
+    overflow-y: auto;
+}
+.input__container label {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    padding: 0 0.4rem;
+    color: ;
+    font-size: 1rem;
+    font-weight: 400;
+    pointer-events: none;
+    z-index: 1000;
+    transition: 1s;
+}
+.input__container.textarea label {
+    top: 1rem;
+    transform: translateY(0);
+}
+.btn {
+    padding: 0.6rem 1.5rem;
+    cursor: pointer;
+    background-color: #19b4ac;
+    color: #FFF;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+}
+.btn:hover {
+    background-color: ;
+}
+.input__container span {
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    padding: 0 0.4rem;
+    color: transparent;
+    pointer-events: none;
+    z-index: 500;
+}
+.input__container span:before, .input__container span:after {
+    content: "";
+    opacity: 0;
+    transition: 0.3s;
+    position: absolute;
+    width: 10%;
+    height: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.input__container span:before {
+    left: 50%;
+}
+.input__container span:after {
+    right: 50%;
+}
+.input__container.focus label {
+    top: -10px;
+    right: 19px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: transparent;
+}
+.input__container.focus span:before, .input__container.focus span:after {
+    width: 50%;
+    opacity: 1;
+}
+.contact__info {
+    padding: 2.3rem 2.2rem;
+    position: relative;
+}
+.contact__info .title {
+    color: rgb(74,34,195);
+}
+.text {
+    margin: 1.5rem 0 2rem 0;
+    color: #333;
+    font-weight: 700;
+    text-align: center;
+}
+.information {
+    display: flex;
+    margin: 0.7rem 0;
+    align-items: center;
+    font-size: 1.1rem;
+}
+.information p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.information i {
+    color: rgb(13, 63, 202);
+}
+.social__media {
+    padding: 2rem 0 0 0;
+}
+.social__media p {
+    color: #333;
+    font-weight: 600;
+}
+.social__icons {
+    display: flex;
+    margin-top: 0.5rem;
+}
+.social__media p {
+    text-align: right;
+    margin-bottom: 1.5rem;
+}
+.social__icons a {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgb(13, 63, 202);
+    color: #FFF;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 40px;
+    margin-right: 1rem;
+    transition: .8s;
+}
+.social__icons a:hover {
+    background-color: rgb(10, 6, 104);
+    transform: rotate(360deg);
+}
+.contact__info:before {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 100px;
+    border: 20px solid rgb(13, 63, 202);
+    border-radius: 50%;
+    bottom: -77px;
+    right: 50px;
+    opacity: 0.3;
+}
+.contact__info:after {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 100px;
+    border: 20px solid rgb(13, 63, 202);
+    border-radius: 50%;
+    bottom: 140px;
+    left: -110px;
+    opacity: 0.3;
+}
+@media (max-width: 850px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+    .contact__info:before {
+        bottom: initial;
+        top: -75px;
+        right: 65px;
+        transform: scale(0.95);
+    }
+    .contact__form:before {
+        top: -13px;
+        left: initial;
+        right: 70px;
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+    .contact__info:before {
+        display: none;
+    }
+    form, .contact__info {
+        padding: 1.7rem 1.6rem;
+    }
+    .text, .information, .social__media p {
+        font-size: 0.8rem;
+    }
+    .title {
+        font-size: 1.15rem;
+    }
+}
