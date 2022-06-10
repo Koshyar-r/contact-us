@@ -12,6 +12,9 @@
     background-color: rgb(13, 63, 202);
     color: #FFF;
 }
+html {
+    overflow-x: auto;
+}
 body, input, textarea {
     font-family: IRANMarker;
 }
